@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Singh - Strategy & Program Management Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info div {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .social-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Profile Photo */
+        .hero-photo {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Achievements Section */
+        .achievements {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .achievement-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .achievement-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .experience-header h3 {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .experience-header .company {
+            font-size: 1.2rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .experience-header .duration {
+            background-color: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .experience-points {
+            list-style: none;
+        }
+
+        .experience-points li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .experience-points li:before {
+            content: "→";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-photo {
+                width: 250px;
+                height: 250px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Shubham Singh</h1>
+                    <h2>Strategy and Program Management Professional</h2>
+                    <p class="tagline">"0-1 Scale-up, Growth, P&L Management & RTM Strategy Expert"</p>
+
+                    <div class="contact-info">
+                        <div>📧 <a href="mailto:shubham.a.singh@iiml.org">shubham.a.singh@iiml.org</a></div>
+                        <div>📱 +91-8707727456</div>
+                        <div>📍 India</div>
+                    </div>
+
+                    <div class="social-links">
+                        <!-- REPLACE WITH YOUR LINKEDIN URL -->
+                        <a href="https://www.linkedin.com/in/-shubham-singh/" target="_blank" class="social-link">
+                            🔗 LinkedIn Profile
+                        </a>
+                        <a href="mailto:shubham.a.singh@iiml.org" class="social-link">
+                            ✉️ Email Me
+                        </a>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="mailto:shubham.a.singh@iiml.org?subject=Strategy Role Discussion" class="btn btn-primary">Schedule Discussion</a>
+                        <a href="#experience" class="btn btn-secondary">View Experience</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <!-- REPLACE THIS WITH YOUR PHOTO -->
+                    <img src="your-photo.jpg" alt="Shubham Singh" class="profile-photo">
+                    <!-- Instructions: Save your photo as 'your-photo.jpg' in the same folder -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>₹84 Cr EBITDA Turnaround</h3>
+                    <p>Planned and executed EBITDA swing from -₹14 Cr to +₹70 Cr across 23 business units at CARS24</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>₹5 Cr Monthly Savings</h3>
+                    <p>Designed AI-powered DIY car inspection process using image processing algorithms</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>₹400 Cr GMV Management</h3>
+                    <p>Successfully managed P&L of wholesale and new business verticals at CARS24</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>40% Cost Reduction</h3>
+                    <p>Reduced cost per order by 40% in 6 months, delivering ₹50L monthly savings at Meesho</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>Multiple Awards</h3>
+                    <p>Received 1 Outstanding + 2 Applause + 1 Spot Award at Monitor Deloitte for exemplary contribution</p>
+                </div>
+
+                <div class="achievement-card">
+                    <h3>Operational Excellence</h3>
+                    <p>Improved complaint resolution: 84% TAT improvement, 67% reopen reduction, 40% CSAT improvement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Senior General Manager - Strategy & Ops</h3>
+                        <div class="company">CARS24</div>
+                    </div>
+                    <div class="duration">March'23 - Present</div>
+                </div>
+                <ul class="experience-points">
+                    <li>Scaled RTO-as-a-service vertical for B2B/B2C markets; targeting ₹1 Cr annualized EBITDA</li>
+                    <li>Led 100+ team across India optimizing post-sale operations with 250+ service partners</li>
+                    <li>Managed 15K+ monthly challans PAN India; drove ₹8 Cr annualized margin with ₹1.5 Cr cost impact</li>
+                    <li>Drafted AOP for 23 business units; planned EBITDA turnaround from -₹14 Cr to +₹70 Cr</li>
+                    <li>Managed P&L for wholesale/new verticals; ₹400 Cr monthly GMV</li>
+                    <li>Optimized margins & operations; achieved EBITDA swing from -₹4 Cr to +₹5 Cr in 1 year</li>
+                    <li>Designed AI-powered DIY car inspection using image processing; ₹5 Cr monthly savings</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Associate Manager - Strategy & Operations</h3>
+                        <div class="company">Meesho</div>
+                    </div>
+                    <div class="duration">July'22 – Feb'23</div>
+                </div>
+                <ul class="experience-points">
+                    <li>Led monetization charter; commercialized tech capabilities for new revenue streams</li>
+                    <li>Crafted GTM strategy; launched 2 businesses via capability assessment and market analysis</li>
+                    <li>Co-owned cost optimization; implemented vendor cost reduction strategies</li>
+                    <li>Reduced cost per order 40% in 6 months; delivered ₹50L monthly savings</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Consultant - Business Strategy</h3>
+                        <div class="company">Monitor Deloitte</div>
+                    </div>
+                    <div class="duration">June'21 – June'22</div>
+                </div>
+                <ul class="experience-points">
+                    <li>Received 1 Outstanding + 2 Applause + 1 Spot Award for exemplary project contribution</li>
+                    <li>Conducted stakeholder interviews and industry analysis; recommended Cloud RTM strategy</li>
+                    <li>Built Go-to-Market strategy for Hydrogen Fuel Cell Trucks (American automotive OEM)</li>
+                    <li>Identified system gaps; strategized CS platform integration for global tech player</li>
+                    <li>Developed membership model business case for US magazine targeting younger demographics</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Operations Intern</h3>
+                        <div class="company">Uber, India</div>
+                    </div>
+                    <div class="duration">April '20-May '20</div>
+                </div>
+                <ul class="experience-points">
+                    <li>Modeled used car marketplace on Uber platform; ₹2.5 Cr revenue potential</li>
+                    <li>Built predictive analytics model matching buyers/sellers to prevent churn</li>
+                    <li>Negotiated with 15+ microfinance firms; piloted credit solution for 20% driver churn</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3>Sr. Manager - Customer Support</h3>
+                        <div class="company">TATA Motors Ltd</div>
+                    </div>
+                    <div class="duration">Aug '16 – Apr '19</div>
+                </div>
+                <ul class="experience-points">
+                    <li>Led 120+ employees; improved division ranking from 23rd to 10th position</li>
+                    <li>Negotiated 1K+ contracts/claims; saved 5K+ man-hours annually</li>
+                    <li>Achieved best service scores among 5 divisions from 25K+ customers for 12 periods</li>
+                    <li>Led B2B/B2C campaigns in Delhi; achieved 22% revenue growth in 6 months</li>
+                    <li>Managed 2,600+ DTC bus operations; 5K+ km daily across Delhi-NCR</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Ready for Your Next Strategic Leader?</h2>
+            <p>Let's discuss how I can drive growth and operational excellence for your organization</p>
+            <div style="display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 30px;">
+                <a href="mailto:shubham.a.singh@iiml.org?subject=Strategy Role Discussion" class="btn btn-primary">Schedule a Discussion</a>
+                <!-- REPLACE WITH YOUR LINKEDIN URL -->
+                <a href="https://www.linkedin.com/in/-shubham-singh/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
